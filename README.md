@@ -947,3 +947,21 @@ Ví dụ:
 🔗 [Link Snippet Generator](https://snippet-generator.app/)
 
 # ⌨ Các shortcut hữu dụng trong Visual Code
+
+## ⚙ Default Shortcut
+
+| Key           |             Mô tả              |                        Command                         |                     Ghi chú |
+| :------------ | :----------------------------: | :----------------------------------------------------: | --------------------------: |
+| Ctrl+K Ctrl+S |        Mở bảng Shortcut        |         workbench.action.openGlobalKeybindings         |                        \_\_ |
+| Ctrl+P        |  Mở navigation tìm file nhanh  |   workbench.action.quickOpenNavigateNextInFilePicker   |               Nhập tên file |
+| Ctrl+Shf+P    |        Mở bảng command         | workbench.action.quickOpenNavigatePreviousInFilePicker |                Nhập command |
+| PageUp        |    Đưa con trỏ về đầu file     |                      cursorPageUp                      |                        \_\_ |
+| PageDown      |    Đưa con trỏ về cuối file    |                     cursorPageDown                     |                        \_\_ |
+| Home          |    Đưa con trỏ về đầu dòng     |                       cursorHome                       |                        \_\_ |
+| End           |    Đưa con trỏ về cuối dòng    |                       cursorEnd                        |                        \_\_ |
+| Ctrl+G        |   Di chuyển đến dòng bất kỳ    |               workbench.action.gotoLine                |                Nhập số dòng |
+| Ctrl+Shf+K    |          Xoá một dòng          |               editor.action.deleteLines                |                        \_\_ |
+| Ctrl+C        |        Copy (Copy dòng)        |           editor.action.clipboardCopyAction            | Copy dòng không cần bôi đen |
+| Ctrl+X        |         Cắt (Cắt dòng)         |            editor.action.clipboardCutAction            |  Cắt dòng không cần bôi đen |
+| Ctrl+L        |     Bôi đen dòng hiện tại      |                  expandLineSelection                   |                        \_\_ |
+| Shf+Arrow     | Chọn liên tiếp dòng hoặc ký tự |         cursor[Row - Column]Select[Navigation]         |                        \_\_ |
