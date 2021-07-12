@@ -608,7 +608,310 @@
 
 # ⚙ Các cài đặt Visual Code
 
-<!-- shortcut -->
+<!-- settings -->
+<details>
+  <summary>
+    0. Hướng dẫn cài đặt với file settings.jon
+  </summary>
+
+  <br/>
+
+> Cho ae nào chưa biết, thì ngoài cài đặt trực tiếp bằng GUI của VSCode, thì ae có thể sửa thằng trong file `settings.json`.
+
+> Có 2 cách để mở file settings.json:
+
+1. Vào phần cài đặt VSCode -> chọn `Open Setting (JSON)` bên gốc phải màn hình.
+
+2. Mở command `Ctrl + Shf + P`, gõ `Open Setting (JSON)`.
+
+</details>
+
+<!-- Fira Font -->
+
+<details>
+  <summary>
+    1. Fira Font và Font Ligatures
+  </summary>
+
+  <br/>
+
+> Font chữ mà mình sử dụng là Fira font và font chữ có hõ trợ ligatures giúp chúng ta đọc code nhanh hơn.
+
+<div align="center">
+  <img src="./images/settings/fira.svg" />
+</div>
+
+```json
+"editor.fontFamily": "Fira Code",
+"editor.fontLigatures": true
+```
+
+🔗 [Link tải Font](https://github.com/tonsky/FiraCode)
+
+</details>
+
+<!-- Zoom -->
+<details>
+  <summary>
+    2. Zoom bằng chuột (Mouse Wheel Zoom)
+  </summary>
+
+  <br/>
+
+> Cài đặt này giúp ae phóng to, thu nhỏ font chữ bằng chuột.
+
+```json
+"editor.mouseWheelZoom": true
+```
+
+</details>
+
+<!-- Format on save -->
+<details>
+  <summary>
+    3. Format
+  </summary>
+
+  <br/>
+
+> Lưu lại khi save (Format on Save)
+
+```json
+"editor.formatOnSave": true
+```
+
+> Chọn trình format mặc đỊnh (default formatter)
+
+```json
+Cấu trúc > "[ngôn ngữ]": {
+  	"editor.defaultFormatter": "trình format"
+}
+
+Ví dụ:
+"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[scss]": {
+		"editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+}
+```
+
+> Một vài cài đặt Prettier
+
+```json
+"prettier.singleQuote": true, // Sử dụng dấu nháy đơn
+"prettier.jsxSingleQuote": true, // Sử dụng dấu nháy đơn cho thuộc tính trong jsx
+"autoprefixer.formatOnSave": true, // Format on Save
+"prettier.trailingComma": "all", // Thêm dấu phẩy vào phần tử cuối của Object
+"prettier.useTabs": true, // Dùng tab thay vì space
+```
+
+</details>
+
+<!-- Emmet -->
+<details>
+  <summary>
+    4. Emmet cho ngôn ngữ khác
+  </summary>
+
+  <br/>
+
+> Emmet bộ snippet giúp ae Front-end code html nhanh hơn. VD: `.box` = `<div class="box"></div>`. Mặc định, ta chỉ có thể dùng trong file html. Với cài đặt này, ae có thể dùng ở các file khác.
+
+```json
+"emmet.includeLanguages": {
+  "javascript": "javascriptreact", // dành cho file jsx
+  "markdown": "html"
+},
+```
+
+</details>
+
+<!-- Custom VSCode -->
+<details>
+  <summary>
+    5. Custom giao diện VSCode
+  </summary>
+
+  <br/>
+
+> Ae có thể thay đổi mọi màu sắc trong IDE một cách tuỳ thích, chỉ cần ae hiều thuộc tính cần thay đổi là gì.
+
+```json
+// Thay đổi màu sắc IDE
+"workbench.colorCustomizations": {
+  "sideBar.background": "#191932",
+  "editor.background": "#191932",
+  // ...
+},
+
+// Một vài cài đặt khác
+"workbench.activityBar.visible": true, // Bật tắt thanh sidebar bên trái
+"workbench.colorTheme": "Dracula", // Cài đặt theme
+"window.menuBarVisibility": "toggle", // Tắt thanh menu trên cùng (Giữ Alt và Click để hiện thanh menu)
+```
+
+🔗 [Link tìm hiểu thêm API VSCode](https://code.visualstudio.com/api/references/theme-color)
+
+</details>
+
+<!-- custom editor theme -->
+<details>
+  <summary>
+    6. Custom theme
+  </summary>
+
+  <br/>
+
+> Ae có thể tuỳ ý thay đổi các màu của bất kỳ theme nào, chỉ cần ae biết tý về Css.
+
+```json
+Cấu trúc
+
+"editor.tokenColorCustomizations": {
+  "[Tên theme]": {
+    "textMateRules": [
+      {
+        "scope": [Mảng các scope],
+        "settings": {
+          Các thuộc tính style
+        }
+      },
+    ]
+  }
+}
+```
+
+```json
+Ví dụ:
+"editor.tokenColorCustomizations": {
+  "[Dracula]": {
+    "textMateRules": [
+      {
+        "scope": ["string.quoted", "string.quoted.single"],
+        "settings": {
+          "foreground": "#d38a60",
+          "fontStyle": "italic"
+        }
+      },
+    ]
+  }
+}
+```
+
+> Cách lấy tên các scope
+
+> B1: Mở command `Ctrl + Shf + P`, gõ "Inspect Editor Tokens and Scopes"
+
+<div align="center">
+  <img src="./images/settings/inspect-tokens.png" />
+</div>
+
+> B2: Click chuột vào vị trí mà ae muốn đổi màu, và copy tên thuộc tính.
+
+<div align="center">
+  <img src="./images/settings/custom-theme.png" />
+</div>
+
+</details>
+
+<!-- Better comment -->
+<details>
+  <summary>
+    7. Better comment
+  </summary>
+
+  <br/>
+
+> Thêm màu sắc để phân biệt các comment với nhau.
+
+<div align="center">
+  <img src="./images/better-comment.png" />
+</div>
+
+```json
+"better-comments.tags": [
+  {
+    "tag": "@render", // prefix trước mỗi comment
+    "color": "#06AEED",
+    "strikethrough": false,
+    "underline": false,
+    "backgroundColor": "transparent",
+    "bold": false,
+    "italic": true
+  },
+
+  // ...
+]
+```
+
+</details>
+
+<!-- html wrap -->
+<details>
+  <summary>
+    8. html wrapper
+  </summary>
+
+  <br/>
+
+> Custom htmlwrapper extension
+
+```json
+"htmltagwrap.tag": "div", // tag mặc định sẽ wrap
+"htmltagwrap.autoDeselectClosingTag": true, // tự động phát hiện kết thúc tag
+```
+
+</details>
+
+<!-- exclude file -->
+<details>
+  <summary>
+    9. Ẩn bớt folder, file (Exclude Folder, Files)
+  </summary>
+
+  <br/>
+
+> Có một số folder và file rất ít khi chúng ta cần mở lên xem như node_modules, hay các file lock... Chúng ta có thể ẩn nó đi bên thanh sidebar để thư mục đỡ rối hơn.
+
+```json
+"files.exclude": {
+  "**/.git": true,
+  "**/.next": true,
+  "**/.svn": true,
+  "**/.hg": true,
+  "**/CVS": true,
+  "**/.DS_Store": true,
+  "**/node_modules/": true,
+  // ...
+},
+```
+
+</details>
+
+<!-- Other -->
+<details>
+  <summary>
+    10. Một vài cài đặt khác
+  </summary>
+
+  <br/>
+
+- Chọn terminal mặc định khi mở
+
+```json
+"terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+```
+
+- Auto save (Hạn chế liệt phím Ctrl + S)
+
+```json
+"files.autoSave": "afterDelay",
+"files.autoSaveDelay": 2000 // Tự lưu sau 2s
+```
+
+</details>
+
 <br />
 
 # 🐱‍👤 Snippet
