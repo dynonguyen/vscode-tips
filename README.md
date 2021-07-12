@@ -11,7 +11,7 @@
 # 🥰 MÔ TẢ
 
 > Sau thời gian làm việc với VSCode IDE thì mình tích góp được một vài cách làm việc nhanh hơn với IDE này. Dưới đây là tất cả những Extensions, Settings, Tips mà mình biết về VScode, mong rằng bài viết này sẽ giúp mọi người tối ưu hoá được công việc, cũng như tạo được nguồn cảm hứng khi làm việc trên IDE này nhé.
-> Nếu thấy hay hãy thả cho mình một sao nhé hehe 😉
+> Nếu thấy hay hãy thả cho mình một sao ⭐ nhé hehe 😉
 
 <!-- Extensions -->
 <br/>
@@ -915,5 +915,35 @@ Ví dụ:
 <br />
 
 # 🐱‍👤 Snippet
+
+> 🐣 Snippet là những đoạn code ngắn thay thế cho những đoạn code có một mẫu chung, được lặp đi lặp lại. Sử dụng quen với các snippet thì ae sẽ giảm được rất nhiều thời gian khi code.
+
+> Ngoài những snippet có sẵn do các Extension hỗ trợ, ae hoàn toàn có thể tạo ra những snippet cho riêng mình một cách dễ dàng.
+
+- B1: Mở cài đặt góc phải, chọn `User Snippet` hoặc dùng tổ hợp phím `Ctrl+U Ctrl+S`.
+
+- B2: Chọn loại snippet (có 2 loại là `Local` chỉ dùng cho dự án hiện tại và `Global` là cho mọi dự án).
+
+- B3: Thêm 1 snippet theo cấu trúc như vd sau:
+
+```json
+"Make Arrow Function": { // Tên Snippet
+  "prefix": "fn", // Cụm thay thế mà ae sẽ gõ
+  "body": [
+    // những gì cần thay thế
+    "const ${1:name} = function(${2:params}){",
+    "  $3",
+    "  return $4;",
+    "}"
+  ],
+  "description": "Make Arrow Function"
+},
+```
+
+> 📝`$1` là thứ tự vị trí con trỏ sẽ di chuyển đến khi ae nhấn tab. `${1:default}` Cũng thế nhưng có default value
+
+> 🐣 Ae có thể snippet generator website để tạo snippet nhanh chóng nhé.
+
+🔗 [Link Snippet Generator](https://snippet-generator.app/)
 
 # ⌨ Các shortcut hữu dụng trong Visual Code
