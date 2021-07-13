@@ -1,0 +1,229 @@
+{
+	// @Note: Function JS
+	// const a = function(){}; => fn
+	"Make Function": {
+		"prefix": "fn",
+		"body": [
+			"const ${1:name} = function(${2:params}){",
+			"  ",
+			"  return null;",
+			"}"
+		],
+		"description": "Make Const  Function"
+	},
+	// const a = async function(){}; > afn
+	"Make Asynchronous Function": {
+		"prefix": "afn",
+		"body": [
+			"const ${1:name} = async function(${2:params}){",
+			"  ",
+			"  return null;",
+			"}"
+		],
+		"description": "Make Asynchronous Function"
+	},
+	// const a = () => {}; > fatfn
+	"Make Fat Arrow Function": {
+		"prefix": "fatfn",
+		"body": [
+			"const ${1:name} = (${2:params}) => {",
+			"  $3",
+			"  return null;",
+			"}"
+		],
+		"description": "Make Const  Function"
+	},
+	// const a = async () => {} => fatafn
+	"Make Async Fat Arrow Function": {
+		"prefix": "fatafn",
+		"body": [
+			"const ${1:name} = async (${2:params}) => {",
+			"  $3",
+			"  return null;",
+			"}"
+		],
+		"description": "Make Const  Function"
+	},
+
+	// Tạo Async Arrow Function có đầy đủ try, catch => affn
+	"Make Fully Async Fat Arrow Function": {
+		"prefix": "affn",
+		"body": [
+			"const ${1:name} = ${2:async} (${3:params}) => {",
+			"  try{",
+			"    $4",
+			"    return null;",
+			"  }catch(error){",
+			"    ",
+			"    throw error;",
+			"  }",
+			"}"
+		],
+		"description": "Make Async Fully Function"
+	},
+
+	// Make IIFE function js > (function(...){  ...  })();
+	"Make IIFE function": {
+		"prefix": "iife",
+		"body": [
+			"(function(){",
+			"    try{",
+			"      $1",
+			"    }catch(error){",
+			"    }",
+			"})();"
+		],
+		"description": "IIFE function"
+	},
+
+	// Make IIFE function js > (async function(...){  ...  })();
+	"Make IIFE async function": {
+		"prefix": "aiife",
+		"body": [
+			"(async function(){",
+			"    try{",
+			"      $1",
+			"    }catch(error){",
+			"    }",
+			"})();"
+		],
+		"description": "IIFE async function"
+	},
+
+	// @Note: Jquery
+	// create selector jquery
+	"Make a selector": {
+		"prefix": "jq",
+		"body": ["$('$1').$2"],
+		"description": "Make a selector"
+	},
+
+	// create selector jquery
+	"Make a this selector": {
+		"prefix": "jqt",
+		"body": ["$(this).$1"],
+		"description": "Make a selector"
+	},
+
+	// Create snippet jquery
+	"Create snippet jquery": {
+		"prefix": "snjq",
+		"body": [
+			"/// <reference path=\"D:\\tips\\typings\\jquery\\globals\\jquery\\index.d.ts\" />"
+		],
+		"description": "Create snippet jquery"
+	},
+
+	// @Note: ExpressJS Snippets
+	// Create express Fully Function > exfn
+	"Make Express Fully Function": {
+		"prefix": "exfn",
+		"body": [
+			"const ${1:fnName} = (req, res, next) => {",
+			"  try {",
+			"    $2",
+			"  } catch (${3:error}) {",
+			"    ",
+			"  }",
+			"}"
+		],
+		"description": "Make Express Fully Function"
+	},
+
+	// Create express Fully Function > eexfn
+	"Make Express Fully Function And Export": {
+		"prefix": "eexfn",
+		"body": [
+			"exports.${1:fnName} = ${2:async} (req, res, next) => {",
+			"  try {",
+			"    $3",
+			"  } catch (${4:error}) {",
+			"    ",
+			"  }",
+			"}"
+		],
+		"description": "Make Express Fully Function And Export"
+	},
+
+	// Create express async Fully Function > exafn
+	"Make Express Async Fully Function": {
+		"prefix": "exafn",
+		"body": [
+			"exports.${1:fnName} = async (req, res, next) => {",
+			"  try {",
+			"    $2",
+			"  } catch (${3:error}) {",
+			"    ",
+			"  }",
+			"}"
+		],
+		"description": "Make Express Fully Function"
+	},
+
+	// Create model with mongoose > mmodel
+	"Create model with mongoose": {
+		"prefix": "mmodel",
+		"body": [
+			"const mongoose = require('mongoose');",
+			"const Schema = mongoose.Schema;",
+			"",
+			"const ${1:name}Schema = new Schema({",
+			"  $5",
+			"});",
+			"",
+			"const $2${1:Name}Model = mongoose.model('$2${1:name}', ${1:name}Schema, '${1:name}s');",
+			"",
+			"module.exports = $2${1:Name}Model;",
+			""
+		],
+		"description": "Create model with mongoose"
+	},
+
+	// Create api express > api
+	"Make Import api express": {
+		"prefix": "api",
+		"body": [
+			"const ${1:name}${2:Api} = require('express').Router();",
+			"const ${1:name}Controller = require('../controllers/${1:name}.controller');",
+			"$3",
+			"module.exports = ${1:name}${2:Api};"
+		],
+		"description": "Make route/api express"
+	},
+
+	// Create route express > api
+	"Make Import route express": {
+		"prefix": "rout",
+		"body": [
+			"const ${1:name}${2:Route} = require('express').Router();",
+			"const ${1:name}Controller = require('../controllers/${1:name}.controller');",
+			"$3",
+			"module.exports = ${1:name}${2:Route};"
+		],
+		"description": "Make route express"
+	},
+
+	// Return res.status(200).json(data);
+	"Response Success with status 200": {
+		"prefix": "r200",
+		"body": ["return res.status(200).json(${1:data});"],
+		"description": "Response Success with status 200"
+	},
+
+	// Return res.status(401).json(data);
+	"Response with status code": {
+		"prefix": "rtEx",
+		"body": ["return res.status($1).json({$2});"],
+		"description": "Response with status code"
+	},
+
+	// Return Error Express 503
+	"Return Error Express": {
+		"prefix": "rer",
+		"body": [
+			"console.error('$1 ERROR: ', error);",
+			"return res.status(503).json({ message: 'Lỗi dịch vụ, thử lại sau' });"
+		],
+		"description": "Return Error Express"
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"create hover active": {
+		"prefix": "hovc",
+		"body": ["&:hover, &:active {$1}"]
+	},
+	"create media screen": {
+		"prefix": "med",
+		"body": ["@media only screen and (${1:max}-width: $2px){ $3 }"]
+	}
+}

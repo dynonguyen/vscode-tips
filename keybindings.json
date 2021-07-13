@@ -1,0 +1,235 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+	{
+		"key": "ctrl+k ctrl+backspace",
+		"command": "editor.foldAll",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+k ctrl+0",
+		"command": "-editor.foldAll",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+u ctrl+s",
+		"command": "workbench.action.openSnippets"
+	},
+	{
+		"key": "ctrl+shift+right",
+		"command": "editor.action.smartSelect.grow"
+	},
+	{
+		"key": "ctrl+shift+left",
+		"command": "editor.action.smartSelect.shrink",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+alt+left",
+		"command": "-editor.action.smartSelect.shrink",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+win+z",
+		"command": "workbench.action.toggleZenMode"
+	},
+	{
+		"key": "ctrl+k z",
+		"command": "-workbench.action.toggleZenMode"
+	},
+	{
+		"key": "ctrl+alt+right",
+		"command": "-workbench.action.moveEditorToNextGroup"
+	},
+	{
+		"key": "ctrl+alt+left",
+		"command": "-workbench.action.moveEditorToPreviousGroup"
+	},
+	{
+		"key": "ctrl+left",
+		"command": "workbench.action.splitEditorLeft"
+	},
+	{
+		"key": "ctrl+shift+left",
+		"command": "workbench.action.navigateLeft"
+	},
+	{
+		"key": "ctrl+shift+right",
+		"command": "workbench.action.navigateRight"
+	},
+	{
+		"key": "ctrl+shift+up",
+		"command": "workbench.action.navigateUp"
+	},
+	{
+		"key": "ctrl+shift+down",
+		"command": "workbench.action.navigateDown"
+	},
+	{
+		"key": "ctrl+left",
+		"command": "-breadcrumbs.focusPrevious",
+		"when": "breadcrumbsActive && breadcrumbsVisible"
+	},
+	{
+		"key": "ctrl+left",
+		"command": "-breadcrumbs.focusPreviousWithPicker",
+		"when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus"
+	},
+	{
+		"key": "ctrl+left",
+		"command": "-cursorWordLeft",
+		"when": "textInputFocus && !accessibilityModeEnabled"
+	},
+	{
+		"key": "ctrl+right",
+		"command": "workbench.action.splitEditorRight"
+	},
+	{
+		"key": "ctrl+right",
+		"command": "-breadcrumbs.focusNextWithPicker",
+		"when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus"
+	},
+	{
+		"key": "ctrl+right",
+		"command": "-breadcrumbs.focusNext",
+		"when": "breadcrumbsActive && breadcrumbsVisible"
+	},
+	{
+		"key": "ctrl+right",
+		"command": "-cursorWordEndRight",
+		"when": "textInputFocus && !accessibilityModeEnabled"
+	},
+	{
+		"key": "ctrl+down",
+		"command": "workbench.action.splitEditorDown"
+	},
+	{
+		"key": "ctrl+up",
+		"command": "workbench.action.splitEditorUp"
+	},
+	{
+		"key": "ctrl+shift+right",
+		"command": "-cursorWordEndRightSelect",
+		"when": "textInputFocus && !accessibilityModeEnabled"
+	},
+	{
+		"key": "shift+right",
+		"command": "-cursorColumnSelectRight",
+		"when": "editorColumnSelection && textInputFocus"
+	},
+	{
+		"key": "shift+right",
+		"command": "-cursorRightSelect",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+shift+left",
+		"command": "-cursorWordLeftSelect",
+		"when": "textInputFocus && !accessibilityModeEnabled"
+	},
+	{
+		"key": "shift+left",
+		"command": "-cursorColumnSelectLeft",
+		"when": "editorColumnSelection && textInputFocus"
+	},
+	{
+		"key": "shift+left",
+		"command": "-cursorLeftSelect",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "shift+down",
+		"command": "-cursorColumnSelectDown",
+		"when": "editorColumnSelection && textInputFocus"
+	},
+	{
+		"key": "ctrl+shift+up",
+		"command": "-cursorUpSelect",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "shift+up",
+		"command": "-cursorColumnSelectUp",
+		"when": "editorColumnSelection && textInputFocus"
+	},
+	{
+		"key": "shift+up",
+		"command": "-cursorUpSelect",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "shift+right",
+		"command": "cursorColumnSelectRight",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+shift+alt+right",
+		"command": "-cursorColumnSelectRight",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "shift+left",
+		"command": "cursorColumnSelectLeft",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+shift+alt+left",
+		"command": "-cursorColumnSelectLeft",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "shift+down",
+		"command": "cursorColumnSelectDown",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+shift+alt+down",
+		"command": "-cursorColumnSelectDown",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+shift+down",
+		"command": "-cursorDownSelect",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "shift+down",
+		"command": "-cursorDownSelect",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "shift+down",
+		"command": "cursorDownSelect"
+	},
+	{
+		"key": "shift+up",
+		"command": "cursorUpSelect"
+	},
+	{
+		"key": "ctrl+shift+w",
+		"command": "workbench.action.closeOtherEditors"
+	},
+	{
+		"key": "ctrl+alt+w",
+		"command": "workbench.action.closeWindow"
+	},
+	{
+		"key": "ctrl+shift+w",
+		"command": "-workbench.action.closeWindow"
+	},
+	{
+		"key": "ctrl+k ctrl+p",
+		"command": "pugbeautify.execute"
+	},
+	{
+		"key": "alt+n",
+		"command": "extension.advancedNewFile"
+	},
+	{
+		"key": "alt+f2",
+		"command": "fileutils.renameFile"
+	},
+	{
+		"key": "alt+delete",
+		"command": "fileutils.removeFile"
+	}
+]

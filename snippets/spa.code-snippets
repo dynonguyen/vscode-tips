@@ -1,0 +1,110 @@
+{
+	// Note: ReactJS
+	// Tạo import react lazy
+	"Make a react lazy": {
+		"prefix": "rlazy",
+		"body": ["const $1 = React.lazy(()=>import('containers/$1'));"],
+		"description": "Make a react lazy"
+	},
+
+	// Tạo default props
+	"Create default props": {
+		"prefix": "dprops",
+		"body": ["$1.defaultProps = {", "  $2", "}"],
+		"description": "Create default props"
+	},
+
+	// Note: Redux, Redux toolkit
+	// Tạo slice trong redux toolkit
+	"Create a slice in redux toolkit": {
+		"prefix": "slredux",
+		"body": [
+			"import { createSlice } from '@reduxjs/toolkit';",
+			"",
+			"const $1 = createSlice({",
+			"  name: '$2',",
+			"  initialState: { $3 },",
+			"  reducers: { $4 },",
+			"});",
+			"",
+			"const { reducer, actions } = $1;",
+			"export const {$5} = actions;",
+			"export default reducer;",
+			""
+		],
+		"description": "Create a slice in redux toolkit"
+	},
+
+	// Note: NextJS
+
+	// Note: Material UI
+	// Tạo file style.js để styled component
+	"Make style component with MUI": {
+		"prefix": "stl",
+		"body": [
+			"import { makeStyles } from '@material-ui/core/styles';",
+			"",
+			"export default makeStyles((theme) => ({",
+			"  $1",
+			"}));"
+		],
+		"description": "Make style component with MUI"
+	},
+
+	// Import file style component với tên là useStyle() và file style.js
+	"Import use style component with MUI": {
+		"prefix": "ustl",
+		"body": ["import useStyle from './style';", "const classes = useStyle();"],
+		"description": "Import use style component with MUI"
+	},
+
+	// Tạo 1 className dùng classes ở trên của MUI và có template string
+	"Make a class name & template string with style component MUI": {
+		"prefix": "ctstl",
+		"body": ["className={`${classes.$1} $2`}"],
+		"description": "Make a class name with style component MUI"
+	},
+
+	// Tạo 1 className dùng classes ở trên của MUI
+	"Make a class name with style component MUI": {
+		"prefix": "cstl",
+		"body": ["className={classes.$1}"],
+		"description": "Make a class name with style component MUI"
+	},
+
+	// Tạo 1 media query responsive MUI
+	"Create media query responsive with MUI": {
+		"prefix": "umedia",
+		"body": ["const $1 = useMediaQuery('($2-width:$3px)');"],
+		"description": "Create media query responsive with MUI"
+	},
+
+	// Tạo 1 media query responsive MUI with breakpoints
+	"Create media query responsive with MUI & breakpoints": {
+		"prefix": "ubmedia",
+		"body": ["const $1 = useMediaQuery(theme.breakpoints.$2('$1'));"],
+		"description": "Create media query responsive with MUI"
+	},
+
+	// Tạo 1 event hover, active style
+	"Create a hover, active": {
+		"prefix": "hov",
+		"body": ["'&:hover, &:active':{$1}"],
+		"description": "Create a hover, active"
+	},
+
+	// Import file scss cùng cấp
+	"Creat an import scss file": {
+		"prefix": "impsc",
+		"body": ["import './index.scss';"]
+	},
+
+	// Create Message Error
+	"Message Error": {
+		"prefix": "merr",
+		"body": [
+			"message.error(error.response?.data?.message || '$1 thất bại, thử lại !', ${2:2})"
+		],
+		"description": "Message Error"
+	}
+}
