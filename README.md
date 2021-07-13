@@ -984,7 +984,7 @@ Ví dụ:
 | Ctrl+U Ctrl+S |                         Mở hoặc tạo Snippet                          |                openSnippets                |                                              \_\_ |
 | Ctrl+,        |                             Mở settings                              |                openSettings                |                                              \_\_ |
 
-## 😎 Shortcut tự tạo của mình
+## 😎 Custom Shortcut
 
 > Để custom lại các shortcut, ae có thể mở bảng shortcut, click thẳng vào shortcut cần custom và sửa lại. Hoặc có thể dùng file `keybinding.json` để sửa, mở file đó ở gốc phải màn hình shortcut.
 
@@ -1002,3 +1002,103 @@ Ví dụ:
 | Alt+N                 |           Tạo file mới nhanh            |        extension.advancedNewFile         | advanced new file Ext |
 | Alt+F2                |       Đổi tên file hiện tại nhanh       |           fileutils.renameFile           |        File Utils Ext |
 | Alt+Delete            |         Xoá file hiện tại nhanh         |           fileutils.removeFile           |        File Utils Ext |
+
+<br/>
+
+# 🌞 Một vài tips cho người dùng Windows
+
+<!-- powertoys -->
+<details>
+  <summary>
+    1. Sử dụng PowerToys
+  </summary>
+
+  <br/>
+
+> PowerToys là một ứng dụng của Microsoft, có các tính năng rất tuyệt vời như chia màn hình làm việc, PowerToys Runs tìm nhanh 1 file/folder như Macbook, ... Một trong só đó là Color Picker rất hữu ích cho ae Front-end và Design nhé 😊
+
+<div align="center">
+  <img src="./images/powertoys-cp.png" />
+</div>
+
+🔗 [Link tải PowerToys](https://github.com/microsoft/PowerToys)
+
+</details>
+
+<!-- emoji -->
+<details>
+  <summary>
+    2. Chèn nhanh 1 Emoji
+  </summary>
+
+  <br/>
+
+> Sử dụng phím tắt `Windows + .` để mở bảng Emoji trên máy nhé.
+
+<div align="center">
+  <img src="./images/emoji.png" />
+</div>
+
+</details>
+
+<!-- clipboard -->
+<details>
+  <summary>
+    3. Mở Clipboard
+  </summary>
+
+  <br/>
+
+> Nhiều khi chúng ta Copy nhiều nội dung và muốn dán lại các nội dung cũ mà không cần phải copy lại, thì ae có thể dùng phím tắt `Windows + V` để mở Clipboard nhé. Nếu ae nào không thể mở thì ae vào phần `Settings > Clipboard Setting > Bật Clipboard history`.
+
+<div align="center">
+  <img src="./images/clipboard.png" />
+</div>
+
+</details>
+
+<!-- window -->
+<details>
+  <summary>
+    4. Mở thêm Desktop làm việc
+  </summary>
+
+  <br/>
+
+> Chắc ae ai cũng đã biết dùng `Alt + Tab` để chuyển giữa các Tab trên 1 màn hình làm việc. Trong 1 vài trường hợp, có một số Tab chạy ngầm như các tab terminal thì để trong 1 màn hình sẽ rất rối. Vậy thì chúng ta sẽ vứt nó chạy bến 1 vùng làm việc mới.
+
+`Windows + Tab > Tạo một Desktop mới > Kéo thả những Tab chạy ngầm qua Desktop đó`
+
+</details>
+
+<!-- DOSKEY -->
+<details>
+  <summary>
+    5. DOSKEY Alias
+  </summary>
+
+  <br/>
+
+> DOSKEY trên Windows giúp ae tạo ra những Alias như trên terminal MacOS hay Linux. Vd: ga -> git add .
+
+- Tạo một tệp .bat hoặc .cmd bằng các DOSKEY lệnh của bạn.
+- Chạy regedit và đi đến HKEY_CURRENT_USER\Software\Microsoft\Command Processor
+- Thêm mục nhập Giá trị chuỗi với tên AutoRun và đường dẫn đầy đủ của tệp .bat / .cmd của bạn.
+- File alias.cmd có dạng như sau:
+
+```
+DOSKEY ni=npm install
+DOSKEY ns=npm start
+DOSKEY nt=npm run test
+DOSKEY nb=npm run build
+```
+
+</details>
+
+<br />
+
+# 🐱‍🐉 Kết quả
+
+<div align="center">
+  <img src="./images/result.png" />
+</div>
