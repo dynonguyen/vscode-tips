@@ -10,7 +10,7 @@
 
 # 🥰 MÔ TẢ
 
-> Sau thời gian làm việc với VSCode IDE thì mình tích góp được một vài cách làm việc nhanh hơn với IDE này. Dưới đây là tất cả những Extensions, Settings, Tips mà mình biết về VScode, mong rằng bài viết này sẽ giúp mọi người tối ưu hoá được công việc, cũng như tạo được nguồn cảm hứng khi làm việc trên IDE này nhé.
+> Sau thời gian làm việc với VSCode thì mình tích góp được một vài cách làm việc nhanh hơn với Code Editor này. Dưới đây là tất cả những Extensions, Settings, Tips mà mình biết về VScode, mong rằng bài viết này sẽ giúp mọi người tối ưu hoá được công việc, cũng như tạo được nguồn cảm hứng khi làm việc trên Code Editor này nhé.
 > Nếu thấy hay hãy thả cho mình một sao ⭐ nhé hehe 😉
 
 <!-- Extensions -->
@@ -735,10 +735,10 @@ Ví dụ:
 
   <br/>
 
-> Ae có thể thay đổi mọi màu sắc trong IDE một cách tuỳ thích, chỉ cần ae hiều thuộc tính cần thay đổi là gì.
+> Ae có thể thay đổi mọi màu sắc trong VSCode một cách tuỳ thích, chỉ cần ae hiều thuộc tính cần thay đổi là gì.
 
 ```json
-// Thay đổi màu sắc IDE
+// Thay đổi màu sắc
 "workbench.colorCustomizations": {
   "sideBar.background": "#191932",
   "editor.background": "#191932",
