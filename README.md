@@ -950,18 +950,35 @@ Ví dụ:
 
 ## ⚙ Default Shortcut
 
-| Key           |             Mô tả              |                        Command                         |                     Ghi chú |
-| :------------ | :----------------------------: | :----------------------------------------------------: | --------------------------: |
-| Ctrl+K Ctrl+S |        Mở bảng Shortcut        |         workbench.action.openGlobalKeybindings         |                        \_\_ |
-| Ctrl+P        |  Mở navigation tìm file nhanh  |   workbench.action.quickOpenNavigateNextInFilePicker   |               Nhập tên file |
-| Ctrl+Shf+P    |        Mở bảng command         | workbench.action.quickOpenNavigatePreviousInFilePicker |                Nhập command |
-| PageUp        |    Đưa con trỏ về đầu file     |                      cursorPageUp                      |                        \_\_ |
-| PageDown      |    Đưa con trỏ về cuối file    |                     cursorPageDown                     |                        \_\_ |
-| Home          |    Đưa con trỏ về đầu dòng     |                       cursorHome                       |                        \_\_ |
-| End           |    Đưa con trỏ về cuối dòng    |                       cursorEnd                        |                        \_\_ |
-| Ctrl+G        |   Di chuyển đến dòng bất kỳ    |               workbench.action.gotoLine                |                Nhập số dòng |
-| Ctrl+Shf+K    |          Xoá một dòng          |               editor.action.deleteLines                |                        \_\_ |
-| Ctrl+C        |        Copy (Copy dòng)        |           editor.action.clipboardCopyAction            | Copy dòng không cần bôi đen |
-| Ctrl+X        |         Cắt (Cắt dòng)         |            editor.action.clipboardCutAction            |  Cắt dòng không cần bôi đen |
-| Ctrl+L        |     Bôi đen dòng hiện tại      |                  expandLineSelection                   |                        \_\_ |
-| Shf+Arrow     | Chọn liên tiếp dòng hoặc ký tự |         cursor[Row - Column]Select[Navigation]         |                        \_\_ |
+| Key           |                                Mô tả                                 |                 Command                  |                                           Ghi chú |
+| :------------ | :------------------------------------------------------------------: | :--------------------------------------: | ------------------------------------------------: |
+| Ctrl+K Ctrl+S |                           Mở bảng Shortcut                           |          openGlobalKeybindings           |                                              \_\_ |
+| Ctrl+P        |                     Mở navigation tìm file nhanh                     |    quickOpenNavigateNextInFilePicker     |                                     Nhập tên file |
+| Ctrl+R        |                    Mở navigation tìm folder nhanh                    | quickOpenNavigateNextInRecentFilesPicker |                                     Nhập tên file |
+| Ctrl+`        |                          Mở Terminal (cmd)                           |         terminal.toggleTerminal          |                                              \_\_ |
+| Ctrl+Shf+C    |                     Mở Terminal (cmd) bên ngoài                      |        terminal.openNativeConsole        |           Mở terminal của máy và đến project root |
+| Ctrl+Space    |                              Nhắc lệnh                               |              triggerSuggest              |                                              \_\_ |
+| Ctrl+Shf+P    |                           Mở bảng command                            |  quickOpenNavigatePreviousInFilePicker   |                                      Nhập command |
+| PageUp        |                       Đưa con trỏ về đầu file                        |               cursorPageUp               |                                              \_\_ |
+| PageDown      |                       Đưa con trỏ về cuối file                       |              cursorPageDown              |                                              \_\_ |
+| Home          |                       Đưa con trỏ về đầu dòng                        |                cursorHome                |                                              \_\_ |
+| End           |                       Đưa con trỏ về cuối dòng                       |                cursorEnd                 |                                              \_\_ |
+| Ctrl+G        |                      Di chuyển đến dòng bất kỳ                       |                 gotoLine                 |                                      Nhập số dòng |
+| Ctrl+Shf+K    |                             Xoá một dòng                             |               deleteLines                |                                              \_\_ |
+| Ctrl+C        |                           Copy (Copy dòng)                           |           clipboardCopyAction            |                       Copy dòng không cần bôi đen |
+| Ctrl+X        |                            Cắt (Cắt dòng)                            |            clipboardCutAction            |                        Cắt dòng không cần bôi đen |
+| Ctrl+L        |                        Bôi đen dòng hiện tại                         |           expandLineSelection            |                                              \_\_ |
+| Shf+[⬆ ⬇ ⬅ ➡] |                    Chọn liên tiếp dòng hoặc ký tự                    | cursor[Row or Column]Select[Navigation]  |                                              \_\_ |
+| Alt+Shf+[⬇ ⬆] |              Copy&Paste một dòng lên trên hoặc bên dưới              |       copyLines[Navigation]Action        |                   Có thể copy 1 đoạn được bôi đen |
+| Alt+[⬇ ⬆]     |                   Di chuyển 1 dòng lên hoặc xuống                    |       moveLines[Navigation]Action        |                                              \_\_ |
+| Ctrl+K Ctrl+L |                  Thu gọn hoặc mở rộng một đoạn code                  |            editor.toggleFold             |                                              \_\_ |
+| Ctrl+D        | Tìm kiếm các từ trùng với ký tự tại con trỏ và thêm 1 con trỏ tại đó |       addSelectionToNextFindMatch        |                                Bôi đen hoặc không |
+| Ctrl+Shf+L    |          Chọn tất cả các ký tự trùng và thêm con trỏ tại đó          |             selectHighlights             | Không phân biệt hoa thường (Bôi đen) và ngược lại |
+| F2            |                    Đổi tên 1 phương thức, 1 biến                     |                  rename                  |           Thay đổi tất cả chỗ nào có dùng biến đó |
+| Ctrl+F or F3  |                   Tìm kiếm và tìm kết quả kế tiếp                    |           nextMatchFindAction            |                                              \_\_ |
+| Ctrl+H        |                               Thay thế                               |          startFindReplaceAction          |                                              \_\_ |
+| Ctrl+B        |                       Đóng mở Sidebar bên trái                       |         toggleSidebarVisibility          |                                              \_\_ |
+| Ctrl+/        |          Tạo hoặc xoá 1 comment hoặc comment dòng hiện tại           |               commentLine                |                   Tạo multiple nếu bôi nhiều dòng |
+| Shf+Tab       |                              Lùi 1 tab                               |                 outdent                  |                                 Ngược lại với tab |
+| Ctrl+U Ctrl+S |                         Mở hoặc tạo Snippet                          |               openSnippets               |                                              \_\_ |
+| Ctrl+,        |                             Mở settings                              |               openSettings               |                                              \_\_ |
