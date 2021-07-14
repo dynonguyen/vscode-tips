@@ -11,7 +11,7 @@
 # 🥰 MÔ TẢ
 
 > Sau thời gian làm việc với VSCode thì mình tích góp được một vài cách làm việc nhanh hơn với Code Editor này. Dưới đây là tất cả những Extensions, Settings, Tips mà mình biết về VScode, mong rằng bài viết này sẽ giúp mọi người tối ưu hoá được công việc, cũng như tạo được nguồn cảm hứng khi làm việc trên Code Editor này nhé.
-> Nếu thấy hay hãy thả cho mình một sao ⭐ nhé hehe 😉
+> Nếu thấy hay hãy thả cho mình một sao ⭐ nhé hehe. 😉
 
 <!-- Extensions -->
 <br/>
@@ -347,6 +347,9 @@
 
 🔗 [Link tải Extension](https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap)
 
+💥 VScode Emmet cũng đã hỗ trợ tính năng này, bạn có thể sử dụng tính năng có sẵn thay vì dùng Ext trên. Bạn có thể bật nó qua shortcut có command `editor.emmet.action.wrapWithAbbreviation`
+🔗 [Link tham khảo](https://code.visualstudio.com/docs/editor/emmet)
+
 </details>
 
 <!-- 19. Indent-rainbow -->
@@ -569,7 +572,7 @@
 
 </details>
 
-<!-- 31. Remote - WSL -->
+<!-- 31. setting sync -->
 <details>
   <summary>
     31. Setting Sync
@@ -584,6 +587,9 @@
 </div>
 
 🔗 [Link tải Extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
+
+💥 Hiện nay, VSCode đã hỗ trợ tính năng Setting Sync có sẵn, bạn có thêm xem thêm về tính năng này mà không cần dùng đến Ext trên.
+🔗 [Link tham khảo](https://code.visualstudio.com/docs/editor/settings-sync)
 
 </details>
 
@@ -647,6 +653,9 @@
 ```
 
 🔗 [Link tải Font](https://github.com/tonsky/FiraCode)
+
+💥 Bạn có thể xem thêm font `Cascadia Code Font` cũng có hỗ trợ ligatures và cả tiếng Việt, khá đẹp đấy !
+🔗 [Link tải Font Cascadia](https://github.com/microsoft/cascadia-code)
 
 </details>
 
@@ -944,6 +953,7 @@ Ví dụ:
 
 > 🐣 Ae có thể snippet generator website để tạo snippet nhanh chóng nhé.
 
+🔗 [Link Snippet VSCode API](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
 🔗 [Link Snippet Generator](https://snippet-generator.app/)
 
 # ⌨ Các shortcut hữu dụng trong Visual Code
